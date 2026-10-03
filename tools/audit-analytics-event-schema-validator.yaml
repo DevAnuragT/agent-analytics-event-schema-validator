@@ -1,0 +1,18 @@
+name: audit-analytics-event-schema-validator
+description: Run Analytics Event Schema Validator checks
+version: 0.1.0
+input_schema:
+  type: object
+  properties:
+    payload: {type: object}
+  required: [payload]
+output_schema:
+  type: object
+  properties:
+    status: {type: string}
+    score: {type: object}
+    findings: {type: array}
+implementation:
+  type: script
+  path: audit-analytics-event-schema-validator.py
+  runtime: python3

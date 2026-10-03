@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: analytics-event-schema-validator
+version: 0.1.0
+description: "Checks event schema declarations for identity, version, and privacy fields."
+skills:
+  - analytics-event-schema-validator-skill
+tools:
+  - audit-analytics-event-schema-validator
+tags:
+  - Data & analytics
+  - evidence-driven

@@ -1,0 +1,35 @@
+{
+  "slug": "analytics-event-schema-validator",
+  "title": "Analytics Event Schema Validator",
+  "category": "Data & analytics",
+  "description": "Checks event schema declarations for identity, version, and privacy fields.",
+  "decision": "Checks event schema declarations for identity, version, and privacy fields.",
+  "limitations": "Uses caller-declared evidence only; does not verify external systems, legal requirements, or real-world truth. Human review remains required.",
+  "inputs": "A JSON object containing the documented fields. Numeric thresholds are deterministic and visible in agent.py.",
+  "good": {
+    "event_name": "checkout_completed",
+    "schema_version": "2.1",
+    "unclassified_personal_fields": 0
+  },
+  "bad": {},
+  "rules": [
+    [
+      "event_name",
+      "event name",
+      "required",
+      null
+    ],
+    [
+      "schema_version",
+      "schema version",
+      "required",
+      null
+    ],
+    [
+      "unclassified_personal_fields",
+      "unclassified personal fields",
+      "max",
+      0
+    ]
+  ]
+}
